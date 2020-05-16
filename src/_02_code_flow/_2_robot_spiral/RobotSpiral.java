@@ -13,6 +13,19 @@ public class RobotSpiral {
 		
 		// Create a new Robot
 		
+		Robot rob = new Robot();
+		rob.penDown();
+		rob.setSpeed(100);
+		
+		
+		for(int line = 0; line < 50; line += 1) {
+			rob.move(line*5);
+			rob.turn(360/7);
+			rob.setPenWidth(line);
+
+		}
+		
+		
 		// Set your robot's pen down 
 		
 		// SPEED. Set the robot to go at max speed (100)
