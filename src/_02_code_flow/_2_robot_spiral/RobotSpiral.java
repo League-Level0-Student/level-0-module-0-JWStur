@@ -21,6 +21,7 @@ public class RobotSpiral {
 		for(int line = 0; line < 50; line += 1) {
 			rob.move(line*5);
 			rob.turn(360/7);
+			rob.setRandomPenColor();
 			rob.setPenWidth(line);
 
 		}
