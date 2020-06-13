@@ -9,22 +9,22 @@
 // This line of code creates a variable to hold your faccate picture
 // You will use it later.
 PImage cat;
-int x=0;
-int y=0;
+int x=180;
+int y=253;
 
 void setup() {
   
 // 2. The code below loads your cat picture into the program. 
 //     Make sure the file name is correct for the cat image you saved earlier
-cat = loadImage("cat.jpg");
+cat = loadImage("cat.jpeg");
   
 // 3. Set the size of the sketch. Make it big enough to show the cat you chose.
-
+size(500,500);
 // 4. Resize the cat so it is the same size as the sketch
-
+cat.resize(500,500);
 // 5. DRAW CAT.    Use the background() command to make the cat the background of the sketch
 //    Run the program to see if the cat is drawn. Get this working before you go on.
- 
+background(cat);
 
   }
 
@@ -43,16 +43,25 @@ void draw() {
 
 // 8. DRAW CIRCLES.
 //     The circles will have black lines around them by default. Put noStroke(); here to remove them.
-
+noStroke();
 // 9.  COLOR.  Set the color of your ellipse to the laser color you would like
 //    Remember to use the   fill()  command to set colors.
-
-
+fill(#FF0000);
 // 10 Use the ellipse() command to draw a circle on the eye (you will have to guess its size). 
 //    Use the x and y variables you just created to place the ellipse in the correct location.
 //                  The ellipse command looks like this:
-                ellipse(x, y, width, height);
+                ellipse(x+104, y+36, 25, 25);
+                ellipse(x, y, 25, 25);
 // Run the program to make sure it is in the right place and is the right size.
+
+if (y                           >500) {
+ x=180;
+ y=253;
+ background(cat);
+ 
+}
+ 
+
 }
 
 // 11.  LASER BEAM.  This code will make your ellipse move down and to the right when you press 
@@ -70,6 +79,7 @@ void keyPressed() {
 //      You will need to click the mouse on the other eye to figure our where to draw the other circle
 //      Use offsets from the other eye so that you don’t need to make a second set of coordinates.
 //      e.g. ellipse(x+220, y-50, 50, 50);
+
 
 //14.  Set the laser back to the beginning when it goes off the screen.
 //     You will need  an if statement to check when x > width 

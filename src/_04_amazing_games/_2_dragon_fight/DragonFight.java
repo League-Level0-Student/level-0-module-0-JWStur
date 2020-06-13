@@ -32,7 +32,7 @@ public class DragonFight {
 		while (true) {
 
 			// THE PLAYER ATTACKS THE DRAGON
-			String playerInput = JOptionPane.showInputDialog("Do you want to yell or kick to attack the dragon?"0);
+			String playerInput = JOptionPane.showInputDialog("Do you want to yell or kick to attack the dragon?");
 				// 3. Ask the player in a pop-up if they want to attack the dragon with a yell
 				// or a kick
 			if (playerInput.equals("yell")) {
